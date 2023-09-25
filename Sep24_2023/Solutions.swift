@@ -5,12 +5,12 @@ func champagneTower(_ poured: Int, _ query_row: Int, _ query_glass: Int) -> Doub
 
     champagneTower[0][0] = Double(poured)
 
+    //i = rows
     for i in 0...query_row
     {
+        //j = columns
         for j in 0...i
         {
-            print(i)
-            print(j)
             var spillage: Double = ((champagneTower[i][j] - 1) / 2)
             //for index out of range
             guard spillage > 0 else { continue }
